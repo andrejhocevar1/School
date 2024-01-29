@@ -1,0 +1,59 @@
+/*glavna stran*/
+html{
+	box-sizing: border-box;
+}
+*,*:before,*:after{
+	box-sizing: inherit;
+}
+body{
+    background-color: rgb(194, 241, 194);
+}
+h2{
+    margin-bottom: 0;
+}
+#container{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#slike div{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0 20px 20px 0;
+    text-align: center;
+}
+#slike div p{
+    margin: 0;
+}
+#slike div img{
+    width: 300px;
+}
+
+@media(max-width:1100px){ /*@media screen and (...)*/
+    body{
+        background-color: rgb(212, 208, 255);
+    }
+	#container{
+        margin: 0 20px;
+    }
+}
+@media(max-width:750px){
+    body{
+        background-color: white;
+    }
+	#container{
+        margin: 0 10px;
+    }
+    #slike div{
+        display: block;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+}

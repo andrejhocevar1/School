@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Cats.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cats"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="stilGumba">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="Yellow"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="BorderBrush" Value="Yellow"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontSize" Value="24pt"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--prva vrstica-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Click="Button_Click" Style="{StaticResource stilGumba}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Cats"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="1" Click="Button_Click_1" Style="{StaticResource stilGumba}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Breeds" />
+                </StackPanel>
+            </Button>
+        </Grid>
+        <!--druga vrstica-->
+        <Grid Grid.Row="1">
+            <Frame Name="mojF"/>
+        </Grid>
+    </Grid>
+</Page>

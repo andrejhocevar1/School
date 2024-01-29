@@ -1,0 +1,37 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Cats.Breeds"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cats"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"                     >
+
+    <Grid HorizontalAlignment="Stretch">
+        <!--druga vrstica-->
+        <GridView x:ConnectionId='2' Name="glavni" Margin="10"                               >
+            <GridView.ItemTemplate>
+                <DataTemplate                         >
+                    <Grid x:ConnectionId='5' Height="200">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Width="300" Grid.Column="0">
+                            <Image x:ConnectionId='9'                             MaxHeight="200" MaxWidth="300" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Margin="20,20,0,0" Orientation="Vertical" Grid.Column="1">
+                            <TextBlock x:ConnectionId='6'                      FontSize="26" TextWrapping="Wrap" Foreground="Yellow" Margin="5"/>
+                            <TextBlock x:ConnectionId='7'                             FontSize="14" TextWrapping="Wrap" Foreground="LightGray" Margin="5"/>
+                            <TextBlock x:ConnectionId='8'                        FontSize="12" TextWrapping="Wrap" Foreground="Yellow" Margin="5"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <ProgressRing x:ConnectionId='3' Name="mojP" Width="100" Height="100" Foreground="Yellow" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+    
+</Page>
+
